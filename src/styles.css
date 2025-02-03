@@ -1,0 +1,19 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+    background-color: #F4F4F4;
+}
+h1, h2 {
+    color: #34495E ; 
+}
+
+li {
+    border: 1px solid #D5D8DC;
+  background-color: #F2F3F4;
+}
+
+.text-danger {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+

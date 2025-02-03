@@ -1,0 +1,73 @@
+<app-home></app-home>
+
+<form class="container form-container" [formGroup]="campaignForm" (ngSubmit)="onSubmit()">
+<div class="form-warpper">
+    <section class="form-group">
+        <label>Campaign Name:</label>
+        <input type="text" formControlName="campaignName">
+        <section *ngIf="campaignForm.get('campaignName')?.invalid && campaignForm.get('campaignName')?.touched">
+            Campaign name is required.
+        </section>
+    </section>
+
+    <section class="form-group">
+        <label>Keywords:</label>
+        <input type="text" formControlName="keywords">
+        <section *ngIf="campaignForm.get('keywords')?.invalid && campaignForm.get('keywords')?.touched">
+            Keywords are required.
+        </section>
+    </section>
+
+    <section class="form-group">
+        <label>Bid Amount:</label>
+        <input type="number" formControlName="bidAmount">
+        <section *ngIf="campaignForm.get('bidAmount')?.invalid && campaignForm.get('bidAmount')?.touched">
+            Bid amount is required.
+        </section>
+    </section>
+    
+    <section class="form-group">
+        <label>Campaign Fund:</label>
+        <input type="number" formControlName="campaignFund">
+        <section *ngIf="campaignForm.get('campaignFund')?.invalid && campaignForm.get('campaignFund')?.touched">
+            Campaign fund is required.
+        </section>
+    </section>
+
+    <section class="switch-container">
+        <label>Status:</label>
+        <input type="checkbox" id="statusSwitch" formControlName="status" class="switch">
+        <label for="statusSwitch" class="switch-label">
+            <span class="slider">
+                <span class="on-label">ON</span>
+                <span class="off-label">OFF</span>
+            </span>
+        </label>
+    </section>
+    
+
+    <section class="form-group">
+        <label>Town:</label>
+        <select formControlName="town">
+            <option value="Not selected">Not selected</option>
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Joliet">Joliet</option>
+        </select>
+    </section>
+    
+
+    <section class="form-group">
+        <label>Radius (km):</label>
+        <input type="number" formControlName="radius">
+        <section *ngIf="campaignForm.get('radius')?.invalid && campaignForm.get('radius')?.touched">
+            Radius is required.
+        </section>
+    </section>
+
+    <div class="d-flex justify-content-center w-100">
+        <button class="btn-lg btn-secondary" type="submit" [disabled]="campaignForm.invalid">Submit</button>
+    </div>
+</div>
+</form>

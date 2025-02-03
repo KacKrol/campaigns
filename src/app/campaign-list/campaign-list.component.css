@@ -1,0 +1,95 @@
+.btn {
+    padding: 10px 15px;
+    border-radius: 50px; 
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    width: auto; 
+}
+
+.btn-delete {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #C0392B;
+}
+
+.btn-edit {
+    background-color: #5D9CEC;
+    color: white;
+    float: right;
+}
+
+.btn-edit:hover {
+    background-color: #3E82D9;
+}
+
+  
+section.container {
+    margin-top: 2rem;
+}
+  
+.campaign-item {
+    background-color: #ffffff;
+    border-radius: 0.5rem; 
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+    padding: 1.5rem;
+    width: 20rem;
+    margin: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.campaign-item:hover {
+    transform: translateY(-0.5rem);
+}
+  
+.campaign-details {
+    font-size: 1.2rem;
+    color: #2C3E50;
+}
+  
+.campaign-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem; 
+}
+  
+  @media (max-width: 64rem) {  /* 1024px */
+    .campaign-item {
+      width: 45%; 
+    }
+  }
+  
+  @media (max-width: 48rem) {  /* 768px */
+    .campaign-item {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 31.25rem) {  /* 500px */
+    .campaign-item {
+      width: 100%;
+      padding: 1.25rem;
+    }
+  
+    .campaign-details {
+      font-size: 1rem;
+    }
+  
+    .campaign-actions {
+      flex-direction: column;
+      gap: 0.625rem;
+      align-items: center;
+    }
+  }
+  
